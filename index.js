@@ -1,3 +1,7 @@
+// git add . 
+// git commit -m "first commit"
+//  git push -u origin main
+
 import readline from "readline";
 const readline = require("readline");
 
@@ -16,3 +20,4 @@ const rl = readline.createInterface({
 // console.log("After Swap: "+a+" and "+b)
 
 //Ex 2: Calculate the simple interest (SI = P × R × T / 100).
+Console.log("Poda Bunda")
