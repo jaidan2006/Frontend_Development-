@@ -1,6 +1,6 @@
 // git add . 
 // git commit -m "first commit"
-//  git push -u origin main
+// git push -u origin main
 
 //Ex 1: Swap two numbers without using a third variable.
 // let a=10
@@ -140,3 +140,67 @@
 // console.log("Sum of array is "+sumofarray(arr))
 
 //Ex 13: Find duplicate elements in an array.
+// let arrr=[1,4,6,2,6,9,7,2],count=1;
+// for(let i=0;i<arrr.length;i++){
+//   for(let j=i+1;j<arrr.length;j++){
+//     if(arrr[i]==arrr[j]){
+//       console.log("Duplicate Value "+count+": "+arrr[i])
+//       count++
+//       break
+//     }
+//   }
+// }
+
+//Ex 14: Merge two arrays into a single array.
+// let arr1=new Array(1,2,3,4)
+// let arr2=new Array(5,6,7,8,9,10)
+// console.log(arr1.concat(arr2))
+
+//Ex 15: Find the frequency of each element in an array.
+
+// let arr = [1,1,1, 2, 3, 2, 4, 1, 2];
+// let freq = {};
+
+// for (let num of arr) {
+//   if (freq[num]) {
+//     freq[num]++;
+//   } else {
+//     freq[num] = 1;
+//   }
+// }
+
+// for (let key in freq) {
+//   console.log(`${key} → ${freq[key]} times`);
+// }
+
+//Ex 16: Create a product object with name, price, and quantity, and display all details.
+// let product={
+//   name:"Shoe",price:500,quantity:4
+// };
+// console.log("\tPRODUCT DETAILS"+"\nName: "+product.name+"\nPrice: "+product.price+"\nQuantity: "+product.quantity)
+
+//Ex 17: Add methods to an object to calculate discounted price.
+// let obj={
+// p_name:"Laptop",p_price:75000,p_quantity:7,
+// discount:function(dis){
+// console.log("Discount: "+(obj.p_price*dis/100))
+// }
+// };
+// console.log("\tPRODUCT DETAILS"+"\nName: "+obj.p_name+"\nPrice: "+obj.p_price+"\nQuantity: "+obj.p_quantity)
+// obj.discount(10)
+
+//Ex 18: Loop through an array of objects and display their properties.
+// let ar_obj=[{name:"Jack",age:16,location:"Chennai"},{name:"Bob",age:22,location:"Erode"},{name:"Ramadurai",age:43,location:"Maduari"}];
+
+// for(let i=0;i<ar_obj.length;i++){
+//   console.log("Set "+(i+1))
+//   console.log("Name: "+ar_obj[i].name+"\nAge: "+ar_obj[i].age+"\nLocation: "+ar_obj[i].location)
+//   console.log("_____________________________________________________")
+// }
+
+//Ex 19: Change the background color of a page on button click.
+// function c_button(){
+//   document.body.style.backgroundColor="orange"
+// }
+
+//Ex 20: Show/hide a paragraph using a toggle button.
