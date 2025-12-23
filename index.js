@@ -199,8 +199,12 @@
 // }
 
 //Ex 19: Change the background color of a page on button click.
-// function c_button(){
-//   document.body.style.backgroundColor="orange"
-// }
+function c_button(){
+  document.body.style.backgroundColor="orange"
+}
 
 //Ex 20: Show/hide a paragraph using a toggle button.
+//code in javascript.html file
+
+//Ex 21: Build a simple live word/character counter for a textarea.
+
