@@ -9,14 +9,13 @@
   <script src="index.js"></script> 
   
     <!--Ex 19 -->
-    <h3 style="text-align: center;">Change the background color of a page on button click</h3>
+    <div style="text-align: center;">
+    <h3>Change the background color of a page on button click</h3>
     <div style="text-align: center;">
       <button style="border-radius: 5px;font-size:20px;background-color:aqua;font-weight:bold;cursor: pointer;" onclick="c_button()">Click Me 😊</button>
-    </div>
 
     <!-- Ex 20 -->
-     <h3 style="text-align: center;">Show/hide a paragraph using a toggle button</h3>
-      <div style="text-align: center;">
+     <h3>Show/hide a paragraph using a toggle button</h3>
 <button id="btn" style="border-radius: 5px;font-size:20px;background-color:aqua;font-weight:bold;cursor: pointer;" onclick="
   let p = document.getElementById('para');
   if(p.style.display === 'none') {
@@ -26,11 +25,42 @@
     p.style.display = 'none';
     document.getElementById('btn').textContent = 'Show 🙂 '
   }
-">Hide😶‍🌫️</button></div>
+">Hide😶‍🌫️</button>
 
 <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, hic, blanditiis odio iure culpa laudantium eligendi repellendus tenetur cumque facere distinctio saepe labore atque deserunt molestiae nam! Incidunt numquam eligendi tenetur iste vitae. Suscipit, explicabo repellendus! Molestias, velit! Repellendus ab corporis iste architecto. Assumenda deleniti sunt velit quibusdam maxime tempora numquam veniam praesentium, commodi a voluptatibus voluptates quidem quasi odit! Consequuntur assumenda quaerat dolorum labore quod quos neque aspernatur tenetur beatae repudiandae, ratione quisquam ipsa, eligendi laboriosam error fugiat? Alias ut quidem ducimus obcaecati, iure quos officiis debitis commodi voluptas laboriosam ad autem, consectetur illo dolore vel veniam incidunt. Error molestiae labore minima ducimus sit quas autem totam inventore eum. Quis aspernatur assumenda quod laborum atque distinctio in cum nisi autem voluptatibus deleniti nemo, minus dolorem nulla veritatis dolorum! Voluptate dicta tempora voluptates, dolores in laudantium magni numquam nemo cum fugit provident libero quod consequuntur. Corrupti dolorem nulla iure cupiditate, nostrum placeat eligendi numquam ipsam vitae nemo perferendis fuga! Sapiente iusto reiciendis quidem, alias nostrum molestiae modi dicta excepturi id quasi. Et, non! Quae atque tempore qui ipsa. Ex laudantium recusandae ad soluta corrupti autem sit nemo minima quam earum ut voluptas illo adipisci excepturi officiis quo, doloribus, sequi molestiae.</p>
 
+<!--Ex 21-->
+ <h3>Build a simple live word/character counter for a textarea.</h3>
+<textarea id="t" placeholder="Type here..."></textarea>
+<p>
+  <span id="c">0</span> characters |
+  <span id="w">0</span> words
+</p>
 
+<!-- Ex 22 -->
+<h3>Form validation: Check if all fields are filled.
+</h3>
+<form id="myForm">
+  Name: <input type="text" id="name" placeholder="Enter Name"><br><br>
+  Email: <input type="email" id="email" placeholder="eg:mamitha@gmail.com"><br><br>
+  Password: <input type="password" id="password" placeholder="Enter Password"><br><br>
+  <button type="submit" style="cursor:pointer;color: green; font-weight: bold;">Submit</button>
+</form>
+<p id="error" style="color:red"></p>
+
+<!-- Ex 23 -->
+<h3>On image click, display image description.</h3>
+<img id="myImage" src="image.png" alt="just_image" style="height:300px;width:380px;cursor:pointer;">
+<p id="description"></p>
+
+<!-- Ex 24 -->
+ <h3>Create a counter that increments/decrements on button clicks.</h3>
+<button style="color: green; font-weight: bold; cursor:pointer;" id="button1">Increment ⬆️</button>
+<button  style="color:red; font-weight: bold; cursor:pointer;" id="button2">Decrement ⬇️</button>
+<p>Count: <span id="ct">0</span></p>
+
+<!-- Ex 25 -->
+</div>
 </body>
 </html> 
  

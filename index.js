@@ -208,3 +208,64 @@ function c_button(){
 
 //Ex 21: Build a simple live word/character counter for a textarea.
 
+document.addEventListener("DOMContentLoaded", function () {
+  const t = document.getElementById("t");
+  const c = document.getElementById("c");
+  const w = document.getElementById("w");
+
+  t.addEventListener("input", function () {
+    c.textContent = t.value.length;
+    w.textContent = t.value.trim()
+      ? t.value.trim().split(" ").length
+      : 0;
+});
+
+//Ex 22: Form validation: Check if all fields are filled.
+  const form = document.getElementById("myForm");
+  const error = document.getElementById("error");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); 
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!name || !email || !password) {
+      error.textContent = "Please fill in all fields!";
+    
+    } else {
+      error.textContent = "";
+      alert("Form submitted successfully!");
+      form.reset(); 
+    }
+});
+
+// Ex 23: On image click, display image description.
+  const img = document.getElementById("myImage");
+  const desc = document.getElementById("description");
+
+  img.addEventListener("click", () => {
+    desc.textContent = "This is a placeholder image which size is 300x380 pixels.";
+  });
+
+// Ex 24: Create a counter that increments/decrements on button clicks.
+let count=0;
+const increment=document.getElementById("button1")
+const decrement=document.getElementById("button2")
+const counter=document.getElementById("ct")
+
+increment.addEventListener("click", () => {
+  count++
+  counter.textContent = count;
+});
+
+decrement.addEventListener("click",() =>{
+count--
+counter.textContent=count
+ });
+
+//Ex 25: Build a simple to-do list with add and delete functionality.
+
+});
+
