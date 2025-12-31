@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .question {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Quiz Application</h2>
+
+  <div id="quiz">
+    <p class="question" id="question"></p>
+
+    <input type="radio" name="answer" value="0"> <span id="opt0"></span><br>
+    <input type="radio" name="answer" value="1"> <span id="opt1"></span><br>
+    <input type="radio" name="answer" value="2"> <span id="opt2"></span><br>
+    <input type="radio" name="answer" value="3"> <span id="opt3"></span><br><br>
+
+    <button onclick="nextQuestion()">Next</button>
+    <p id="result"></p>
+  </div>
+
+  <h3 id="score"></h3>
+
+  <script>
+    const quizData = [
+      {
+        question: "1. What does HTML stand for?",
+        options: [
+          "Hyper Text Markup Language",
+          "High Text Machine Language",
+          "Hyperlinks Text Mark Language",
+          "Home Tool Markup Language"
+        ],
+        correct: 0
+      },
+      {
+        question: "2. Which language is used for styling web pages?",
+        options: ["HTML", "Java", "CSS", "Python"],
+        correct: 0
+      },
+      {
+        question: "3. Which is a JavaScript framework?",
+        options: ["CSS", "HTML", "React", "SQL"],
+        correct: 0
+      },
+      {
+        question: "4. Which tag is used to create a link?",
+        options: ["<a>", "<p>", "<div>", "<link>"],
+        correct: 0
+      },
+      {
+        question: "5. Which symbol is used for comments in JavaScript?",
+        options: ["//", "<!-- -->", "#", "**"],
+        correct: 0
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function loadQuestion() {
+      document.getElementById("result").textContent = "";
+      const q = quizData[currentQuestion];
+
+      document.getElementById("question").textContent = q.question;
+      document.getElementById("opt0").textContent = q.options[0];
+      document.getElementById("opt1").textContent = q.options[1];
+      document.getElementById("opt2").textContent = q.options[2];
+      document.getElementById("opt3").textContent = q.options[3];
+
+      document.querySelectorAll("input[name='answer']").forEach(r => r.checked = false);
+    }
+
+    function nextQuestion() {
+      const selected = document.querySelector("input[name='answer']:checked");
+
+      if (!selected) {
+        alert("Please select an answer");
+        return;
+      }
+
+      if (parseInt(selected.value) === quizData[currentQuestion].correct) {
+        score++;
+        document.getElementById("result").textContent = "Correct ✅";
+      } else {
+        document.getElementById("result").textContent = "Incorrect ❌";
+      }
+
+      currentQuestion++;
+
+      if (currentQuestion < quizData.length) {
+        setTimeout(loadQuestion, 800);
+      } else {
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("score").textContent =
+          "Final Score: " + score + " / " + quizData.length;
+      }
+    }
+loadQuestion();
+  </script>
+
+</body>
+</html>

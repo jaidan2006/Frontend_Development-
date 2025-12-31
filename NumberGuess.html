@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    .game-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 40px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      width: 94px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff9800;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e68900;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="game-container">
+    <h2>Number Guessing Game</h2>
+    <p>Guess a number between 1 and 100</p>
+
+    <input type="number" id="guess" placeholder="Your guess">
+    <button onclick="checkGuess()">Guess</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+    function checkGuess() {
+      const guess = parseInt(document.getElementById("guess").value);
+      const message = document.getElementById("message");
+
+      if (isNaN(guess) || guess < 1 || guess > 100) {
+        message.textContent = "Enter a number between 1 and 100!";
+        return;
+      }
+
+      if (guess === randomNumber) {
+        message.textContent = "🎉 Correct!";
+      } else if (guess < randomNumber) {
+        message.textContent = "⬇️ Too Low!";
+      } else {
+        message.textContent = "⬆️ Too High!";
+      }
+
+      document.getElementById("guess").value = "";
+    }
+  </script>
+
+</body>
+</html>
